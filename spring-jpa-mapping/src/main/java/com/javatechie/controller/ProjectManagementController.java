@@ -1,5 +1,6 @@
 package com.javatechie.controller;
 
+import ch.qos.logback.core.CoreConstants;
 import com.javatechie.entity.Engineer;
 import com.javatechie.entity.Project;
 import com.javatechie.service.ProjectManagementService;
@@ -14,8 +15,9 @@ public class ProjectManagementController {
     @Autowired
     private ProjectManagementService service;
 
-    @PostMapping("/projects")
+    @PostMapping("/pro")
     public Project saveNewProject(@RequestBody Project project){
+        System.out.println("Hello");
         return service.saveProject(project);
     }
 
